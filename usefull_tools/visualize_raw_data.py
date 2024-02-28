@@ -1,0 +1,34 @@
+from pathlib import Path
+import matplotlib.pyplot as plt
+import numpy as np
+
+import probeinterface
+
+import spikeinterface.full as si
+
+
+base_folder = Path("/home/samuel/DataSpikeSorting/WIRED/")
+
+
+electrode_type ="DIXI"
+subject = "sub-004"
+session = "sess-001"
+
+
+
+
+
+rec_folder = base_folder / "binary" / electrode_type / subject / session / "ieeg"
+
+rec = si.load_extractor(rec_folder)
+
+
+probe = probeinterface.generate_tetrode()
+probe.set_device_channel_indices(np.arange(4))
+rec = rec.set_probe(probe)
+rec
+
+rec = si.bandpass_filter(rec, freq_min=150., freq_max=10000.)
+
+si.plot_traces(rec, backend="ephyviewer")
+
