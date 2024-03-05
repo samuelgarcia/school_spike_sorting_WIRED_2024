@@ -10,15 +10,26 @@ import spikeinterface.full as si
 base_folder = Path("/home/samuel/DataSpikeSorting/WIRED/")
 
 
-electrode_type ="DIXI"
-subject = "sub-004"
-session = "sess-001"
+# probe_type = "AdTech"
+# subject_id = "sub-001"
+# session_id = "sess-001"
+
+# probe_type = "AdTech"
+# subject_id = "sub-002"
+# session_id = "sess-001"
+
+probe_type ="DIXI"
+subject_id = "sub-003"
+session_id = "sess-001"
+
+# probe_type ="DIXI"
+# subject_id = "sub-004"
+# session_id = "sess-001"
 
 
 
 
-
-rec_folder = base_folder / "binary" / electrode_type / subject / session / "ieeg"
+rec_folder = base_folder / "Binary" / probe_type / subject_id / session_id / "ieeg"
 
 rec = si.load_extractor(rec_folder)
 

@@ -2,10 +2,10 @@ from pathlib import Path
 
 import spikeinterface.full as si
 
-base_folder = Path("/home/samuel/DataSpikeSorting/WIRED/")
+base_folder = Path("/home/samuel/DataSpikeSorting/WIRED_SI_tutos/")
 
 neuralynx_folder = base_folder / "Neuralynx"
-out_folder = base_folder / "binary"
+out_folder = base_folder / "Binary"
 
 job_kwargs = dict(n_jobs=-1, progress_bar=True, chunk_duration="1s")
 
