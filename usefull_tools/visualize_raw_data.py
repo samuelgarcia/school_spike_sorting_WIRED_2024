@@ -7,7 +7,7 @@ import probeinterface
 import spikeinterface.full as si
 
 
-base_folder = Path("/home/samuel/DataSpikeSorting/WIRED/")
+base_folder = Path("/home/samuel/DataSpikeSorting/WIRED_SI_tutos/")
 
 
 # probe_type = "AdTech"
@@ -18,13 +18,13 @@ base_folder = Path("/home/samuel/DataSpikeSorting/WIRED/")
 # subject_id = "sub-002"
 # session_id = "sess-001"
 
-probe_type ="DIXI"
-subject_id = "sub-003"
-session_id = "sess-001"
-
 # probe_type ="DIXI"
-# subject_id = "sub-004"
+# subject_id = "sub-003"
 # session_id = "sess-001"
+
+probe_type ="DIXI"
+subject_id = "sub-004"
+session_id = "sess-001"
 
 
 
