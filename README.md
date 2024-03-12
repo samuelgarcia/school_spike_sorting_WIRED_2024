@@ -68,6 +68,7 @@ Standard installation using system and pip are faster and easier to manage.
   * `pip install --upgrade pip`
   * `pip install spikeinterface[full]`
   * `pip install PySide6`
+  * `pip install jupyterlab`
   * `pip install https://github.com/NeuralEnsemble/python-neo/archive/master.zip`
   * `pip install https://github.com/SpikeInterface/spikeinterface/archive/main.zip`
   * `pip install https://github.com/SpikeInterface/spikeinterface-gui/archive/main.zip`
