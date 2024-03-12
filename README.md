@@ -19,6 +19,18 @@ Here in this repository:
     * dixi_sub-003.ipynb
     * dixi_sub-004.ipynb
 
+## Approximative timeline : 3 hours + bonus
+
+* Overview spike sorting - 40 min (Pierre)
+* Overview spikeinterface - 20 min (Sam)
+* Demo notebook with simulated dataset - 20 min (Sam)
+* Demo notebook with simulated dataset drifting - 10 min (Sam)
+* Hands-on on the same notebook - 30 min (all participants)
+* Tutorial on noise measurement - 5 min (Sam)
+* Demo real data - 30 min (Pierre)
+* Hands-on real data - 30 min (all participants)
+* Bonus time : exaplore your own dataset if you want to stay one hour more.
+
 
 ## Installation
 
