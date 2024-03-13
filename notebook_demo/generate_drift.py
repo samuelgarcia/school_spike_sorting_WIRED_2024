@@ -115,7 +115,7 @@ def generate_drift_on_tetrode(num_units=5, drift_amplitude=20., duration=300., n
 
     drifting_templates = DriftingTemplates.from_static(templates)
 
-    firing_rates_range = (5., 10.)
+    firing_rates_range = (1., 8.)
     lim0, lim1 = firing_rates_range
     firing_rates = rng.random(num_units) * (lim1 - lim0) + lim0    
 
@@ -164,6 +164,7 @@ def generate_drift_on_tetrode(num_units=5, drift_amplitude=20., duration=300., n
         durations=[duration],
         noise_level=noise_level,
         dtype="float32",
+        strategy="on_the_fly",
     )
 
     recording = InjectDriftingTemplatesRecording(
@@ -187,7 +188,7 @@ if __name__ == "__main__":
     base_folder = Path("/home/samuel/DataSpikeSorting/WIRED_SI_tutos/")
     folder = base_folder / "generated_recording"
 
-    recording_drift, sorting = generate_drift_on_tetrode(drift_amplitude=20., duration=300., noise_level=5., seed=1234)
+    recording_drift, sorting = generate_drift_on_tetrode(drift_amplitude=0., duration=300., noise_level=5., seed=2205)
 
     # si.plot_traces(recording_drift, backend='ephyviewer')
 
@@ -199,7 +200,7 @@ if __name__ == "__main__":
     if sorter_folder.exists():
         shutil.rmtree(sorter_folder)
 
-    job_kwargs = dict(n_jobs=1)
+    job_kwargs = dict(n_jobs=-1)
 
     sorting_tdc_drift = si.run_sorter(sorter_name, recording_drift, output_folder=sorter_folder, verbose=True, job_kwargs=job_kwargs, raise_error=True)
 
